@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		A60264E027149BA900EF944D /* MenuCategoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60264DF27149BA900EF944D /* MenuCategoryViewCell.swift */; };
+		A67D596B2714BDC600F98C53 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67D596A2714BDC600F98C53 /* MenuItem.swift */; };
+		A67D596D2714BE3D00F98C53 /* HotBeveragesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67D596C2714BE3D00F98C53 /* HotBeveragesViewController.swift */; };
+		A67D596F2714BE9600F98C53 /* MenuItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67D596E2714BE9600F98C53 /* MenuItemViewCell.swift */; };
+		A67D59712714BEF700F98C53 /* MenuCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67D59702714BEF700F98C53 /* MenuCategory.swift */; };
 		A6A79460268137DD00D97421 /* MenuCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A7945F268137DD00D97421 /* MenuCategoryViewController.swift */; };
 		A6A79462268137F000D97421 /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A79461268137F000D97421 /* ContactUsViewController.swift */; };
 		A6A794642681380300D97421 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A794632681380300D97421 /* EventsViewController.swift */; };
@@ -22,6 +26,10 @@
 
 /* Begin PBXFileReference section */
 		A60264DF27149BA900EF944D /* MenuCategoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuCategoryViewCell.swift; path = ../../../../mic2193178/Desktop/JarrodsCoffee/JarrodsCoffee/MenuCategoryViewCell.swift; sourceTree = "<group>"; };
+		A67D596A2714BDC600F98C53 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuItem.swift; path = ../../../../mic2193178/Desktop/JarrodsCoffee/JarrodsCoffee/MenuItem.swift; sourceTree = "<group>"; };
+		A67D596C2714BE3D00F98C53 /* HotBeveragesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HotBeveragesViewController.swift; path = ../../../../mic2193178/Desktop/JarrodsCoffee/JarrodsCoffee/HotBeveragesViewController.swift; sourceTree = "<group>"; };
+		A67D596E2714BE9600F98C53 /* MenuItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuItemViewCell.swift; path = ../../../../mic2193178/Desktop/JarrodsCoffee/JarrodsCoffee/MenuItemViewCell.swift; sourceTree = "<group>"; };
+		A67D59702714BEF700F98C53 /* MenuCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCategory.swift; sourceTree = "<group>"; };
 		A6A7945F268137DD00D97421 /* MenuCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCategoryViewController.swift; sourceTree = "<group>"; };
 		A6A79461268137F000D97421 /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
 		A6A794632681380300D97421 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
@@ -77,7 +85,11 @@
 				A6A79461268137F000D97421 /* ContactUsViewController.swift */,
 				A6A794632681380300D97421 /* EventsViewController.swift */,
 				A6A794652681381800D97421 /* MapViewController.swift */,
+				A67D59702714BEF700F98C53 /* MenuCategory.swift */,
 				A60264DF27149BA900EF944D /* MenuCategoryViewCell.swift */,
+				A67D596A2714BDC600F98C53 /* MenuItem.swift */,
+				A67D596C2714BE3D00F98C53 /* HotBeveragesViewController.swift */,
+				A67D596E2714BE9600F98C53 /* MenuItemViewCell.swift */,
 			);
 			path = JarrodsCoffee;
 			sourceTree = "<group>";
@@ -156,8 +168,12 @@
 				D3B8820E263A1F4B00BC294C /* AppDelegate.swift in Sources */,
 				A6A79462268137F000D97421 /* ContactUsViewController.swift in Sources */,
 				D3B88210263A1F4B00BC294C /* SceneDelegate.swift in Sources */,
+				A67D59712714BEF700F98C53 /* MenuCategory.swift in Sources */,
+				A67D596F2714BE9600F98C53 /* MenuItemViewCell.swift in Sources */,
 				A6A79460268137DD00D97421 /* MenuCategoryViewController.swift in Sources */,
 				A6A794642681380300D97421 /* EventsViewController.swift in Sources */,
+				A67D596D2714BE3D00F98C53 /* HotBeveragesViewController.swift in Sources */,
+				A67D596B2714BDC600F98C53 /* MenuItem.swift in Sources */,
 				A60264E027149BA900EF944D /* MenuCategoryViewCell.swift in Sources */,
 				A6A794662681381900D97421 /* MapViewController.swift in Sources */,
 			);

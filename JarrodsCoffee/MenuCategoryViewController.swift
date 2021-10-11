@@ -47,10 +47,6 @@ class MenuCategoryViewController: UIViewController,UITableViewDataSource,UITable
         self.performSegue(withIdentifier: segueIdentifier, sender: self)
     }
     
-    @IBAction func unwindToMenuCategoryViewController(_ unwindSegue: UIStoryboardSegue) {
-        _ = unwindSegue.source
-        // Use data from the view controller which initiated the unwind segue
-    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell=tableView.dequeueReusableCell(withIdentifier: "categoryCell", for: indexPath as IndexPath) as! MenuCategoryViewCell
