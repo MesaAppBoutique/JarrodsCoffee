@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct JarrodsEvent: Codable {
+struct JarrodsEvent: Decodable {
     let id: String
     let eventDateTime: String
     let eventLocation: String
@@ -30,9 +30,16 @@ class EventsViewController: UIViewController {
                         print(error)
                     }
                 }
-        
-//readLocalFile is the JSON File that Json developed earlier with the menu data.
     }
+    
+    let eventJson = """
+        {
+            "id": "1",
+            "eventDateTime": "6/1/2022",
+            "eventLocation": "Jarrod's Coffee",
+            "eventDescription": "Fun and Dance Summer"
+        }
+    """.data(using: .utf8)
     
     private func readLocalFile(forName name: String) -> Data? {
          do {
@@ -67,13 +74,14 @@ class EventsViewController: UIViewController {
 
      private func parse(jsonData: Data) {
          do {
-             let decodedData = try JSONDecoder().decode(JarrodsEvent.self,
-                                                        from: jsonData)
+             let eventData = try JSONDecoder().decode(JarrodsEvent.self,
+                                                      from: eventJson!)
              
-             print("id: ", decodedData.id)
-             print("eventDateTime: ", decodedData.eventDateTime)
-             print("eventLocation: ", decodedData.eventLocation)
-             print("eventDescription: ", decodedData.eventDescription)
+             print("id: ", eventData.id)
+             //eventDateTime = eventData.id
+             print("eventDateTime: ", eventData.eventDateTime)
+             print("eventLocation: ", eventData.eventLocation)
+             print("eventDescription: ", eventData.eventDescription)
              
          } catch {
              print("Decode error, something went wrong.")

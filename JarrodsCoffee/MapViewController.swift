@@ -9,12 +9,16 @@
 import UIKit
 import MapKit
 import CoreLocation
+import CoreLocationUI
+
 
 class MapViewController: UIViewController,
- MKMapViewDelegate, CLLocationManagerDelegate, UIGestureRecognizerDelegate {
+ MKMapViewDelegate,  CLLocationManagerDelegate, UIGestureRecognizerDelegate {
+    
+    private var locationManager = CLLocationManager()
     
     @IBOutlet weak var mapView: MKMapView!
-   
+
 
     @IBAction func satelliteViewTypeButton(_ sender: Any) {
         self.mapView.mapType = MKMapType.hybridFlyover
@@ -24,7 +28,13 @@ class MapViewController: UIViewController,
         self.mapView.mapType = MKMapType.standard
     }
     
-    private let locationManager = CLLocationManager()
+    
+    @IBAction func getDirectionsButton(_ sender: UIButton) {
+     
+        print("GD button pressed")
+    }
+    
+    
     
     let jarrodLoc = CLLocationCoordinate2D(latitude: 33.415490, longitude: -111.836050)
     let jarrodAnnotation = MKPointAnnotation()
@@ -38,6 +48,7 @@ class MapViewController: UIViewController,
         jarrodAnnotation.coordinate = jarrodLoc
         jarrodAnnotation.title = "Jarrod's Coffee, 154 W. Main St"
         mapView.addAnnotation(jarrodAnnotation)
+        mapView.showsUserLocation = true
         showJarrodLocation()
     }
 
@@ -61,8 +72,8 @@ class MapViewController: UIViewController,
             renderer.lineWidth = 3.0
             return renderer
         }
-
-    private func checkAuthorizationForLocation() {
+//    private func checkAuthorizationForLocation()
+    func checkAuthorizationForLocation() {
         switch CLLocationManager.authorizationStatus() {
         case .authorizedWhenInUse, .authorizedAlways:
             locationManager.stopUpdatingLocation()
@@ -78,6 +89,7 @@ class MapViewController: UIViewController,
         @unknown default:
             break
         }
+        
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
